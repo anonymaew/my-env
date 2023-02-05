@@ -340,7 +340,7 @@
   typeset -g POWERLEVEL9K_DIR_CLASSES=()
 
   # Custom prefix.
-  typeset -g POWERLEVEL9K_DIR_PREFIX='%F{green}%n@%m%f:'
+  typeset -g POWERLEVEL9K_DIR_PREFIX='%B%F{green}%n@%m%f%b:'
 
   #####################################[ vcs: git status ]######################################
   # Branch icon. Set this parameter to '\UE0A0 ' for the popular Powerline branch icon.
