@@ -27,17 +27,24 @@ if [ -z "$(which tmux)" ]; then
 fi
 
 # Load config files
-cp -r ./.* ~/
+cp -r ./.zshrc ~/
+cp -r ./.p10k.zsh ~/
+cp -r ./.vimrc ~/
+cp -r ./.tmux.conf ~/
 
 # Install powerlevel10k
+rm -rf ~/.zsh
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zsh/powerlevel10k
 
 # Install vim-plug
-curl -fLo $(HOME_DIR)/.vim/autoload/plug.vim --create-dirs \
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+rm -rf ~/.vim
+git clone --depth=1 https://github.com/junegunn/vim-plug.git ~/.vim/autoload
 
 # Install tpm
+rm -rf ~/.tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Sourcing tmux
 tmux source ~/.tmux.conf
+
+
