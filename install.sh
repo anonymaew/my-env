@@ -39,12 +39,11 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zsh/powerlev
 # Install vim-plug
 rm -rf ~/.vim
 git clone --depth=1 https://github.com/junegunn/vim-plug.git ~/.vim/autoload
+echo "Plug install"
+vim -es -u .vimrc -i NONE -c "PlugInstall" -c "qa"
 
 # Install tpm
 rm -rf ~/.tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-# Sourcing tmux
 tmux source ~/.tmux.conf
-
-
+~/.tmux/plugins/tpm/bin/install_plugins
