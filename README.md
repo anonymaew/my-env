@@ -12,6 +12,7 @@ My dev config for UNIX environment, so that I have the same favorite-reproducibl
 ## Prerequisite
 
 Assuming you already installed `git`, `zsh`, `vim`, and `tmux` with your favorite choice of package manager.
+If you want to use Copilot, `nodejs` is required.
 
 ## Installation
 
@@ -23,3 +24,7 @@ cd myenv
 chmod +x install.sh
 ./install.sh
 ```
+
+## Post-Installation
+
+If you want to enable Copilot, open `vim` and type `:Copilot setup` to setup the Copilot
