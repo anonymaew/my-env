@@ -13,7 +13,9 @@ set t_ut=
 colorscheme codedark
 
 " tab 4 spaces
-set tabstop=4
-set shiftwidth=4
+filetype plugin indent on
+set tabstop=4 shiftwidth=4 expandtab
+autocmd FileType make setlocal noexpandtab
+autocmd BufRead,BufNewfile *.html,*.js,*.jsx,*.ts,*.tsx,*.astro setlocal tabstop=2 shiftwidth=2 expandtab
 
 set encoding=utf-8
