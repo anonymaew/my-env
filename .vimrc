@@ -4,12 +4,15 @@ call plug#begin('~/.vim/plugged')
 Plug 'github/copilot.vim'
 " VSCode dark theme
 Plug 'tomasiser/vim-code-dark'
+" Astro plugin
+Plug 'wuelnerdotexe/vim-astro'
 
 call plug#end()
 
 " Fixs for 256 color terminals
 set t_Co=256
 set t_ut=
+" Set theme
 colorscheme codedark
 
 " tab 4 spaces
